@@ -113,20 +113,13 @@ public class JogoServiceImpl implements JogoService {
 		}
 		
 		
-//		if(jogo.getSena().size() > 0) {
-//			return false;
-//		}else if(jogo.getQuina().size() > 1) {
-//			return false;
-//		}else if(jogo.getQuadra().size() > 5) {
-//			return false;
-//		}
-//		return true;
-		
 		if(jogo.getSena().size() > 0) {
-			return true;
-		}else {
+			return false;
+		}else if(jogo.getQuina().size() > 1) {
+			return false;
+		}else if(jogo.getQuadra().size() > 5) {
 			return false;
 		}
-		
+		return true;
 	}
 }
